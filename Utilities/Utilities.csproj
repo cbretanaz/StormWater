@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{998B3B83-7881-48C0-9217-8BA9B711CD50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoP.Enterprise</RootNamespace>
+    <AssemblyName>CoP.Enterprise.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\SWMMBuilds\Output\dllBin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SWMMBuilds\Output\dllBin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\LAS\packages\ClosedXML.0.92.1\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\LAS\packages\NLog.4.5.3\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedSource\Versioning\SWWM.Assembly.cs">
+      <Link>Globals\SWWM.Assembly.cs</Link>
+    </Compile>
+    <Compile Include="Code\BiDirectionalDictionary.cs" />
+    <Compile Include="Code\ComboEnum.cs" />
+    <Compile Include="Code\CommandLineArguments.cs" />
+    <Compile Include="Code\Crypto.cs" />
+    <Compile Include="Code\DALLog.cs" />
+    <Compile Include="Code\Email.cs" />
+    <Compile Include="Code\ExcelSupport.cs" />
+    <Compile Include="Code\Exceptions.cs" />
+    <Compile Include="Code\ExtensionMethods.cs" />
+    <Compile Include="Code\Globals.cs" />
+    <Compile Include="Code\HourInterval.cs" />
+    <Compile Include="Code\Impersonator.cs" />
+    <Compile Include="Code\Interval.cs" />
+    <Compile Include="Code\Message.cs" />
+    <Compile Include="Code\ParallelLinqExtensions.cs" />
+    <Compile Include="Code\QuickSort.cs" />
+    <Compile Include="Code\ScreenCapture.cs" />
+    <Compile Include="Code\Serialization.cs" />
+    <Compile Include="Code\SortableBindingList.cs" />
+    <Compile Include="Code\Xml.cs" />
+    <Compile Include="Config\XmlConfigurator.cs" />
+    <Compile Include="Controls\DataGridViewDisableButton.cs" />
+    <Compile Include="Controls\DataGridViewNumericUpDownCell.cs" />
+    <Compile Include="Controls\DataGridViewNumericUpDownColumn.cs" />
+    <Compile Include="Controls\DataGridViewNumericUpDownEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DateTimePickerEnhanced.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NumberBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RadioGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ReverseListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TransparentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\CoPGlobals.cs" />
+    <Compile Include="Support\Interfaces.cs" />
+    <Compile Include="Support\InterferenceConditionComboBoxCell.cs" />
+    <Compile Include="Support\UserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,9 @@
+Project,Language,Files,Total Lines,Code Lines,Commented Lines,Empty Lines,Code Ratio %
+BES.SWMM.PAC,,100,25609,20055,3814,1740,78
+DomainModel,C#,23,5074,3636,965,473,71
+PACInterfaces,C#,5,75,53,14,8,70
+PACSizingEngine,C#,9,2132,1614,290,228,75
+PACWebApp,C#,6,152,115,19,18,75
+TestHarness,C#,13,7530,6256,1115,159,83
+UnitTesting,C#,8,1162,1066,49,47,91
+Utilities,C#,36,9484,7315,1362,807,77
